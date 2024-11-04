@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Gimnasio</title>
+    <link href="./css/bootstrap.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <!DOCTYPE html>
+    <html lang="es">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Página de Gimnasio</title>
+        <link href="./css/bootstrap.css" rel="stylesheet" />
+        <style>
+          .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .navbar-brand {
+            display: flex;
+            align-items: center;
+          }
+
+          .navbar-brand img {
+            margin-right: 10px;
+          }
+
+          .navbar-nav {
+            margin-left: auto;
+          }
+
+          footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+          }
+
+          .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+          }
+          .social-icons img {
+            transition: transform 0.2s;
+          }
+
+          .social-icons img:hover {
+            transform: scale(1.1);
+          }
+          .card {
+            height: 100%;
+          }
+
+          .card-img-top {
+            height: 200px;
+            object-fit: cover;
+          }
+          .pink-card {
+            background-color: #ffb6c1;
+            border: none;
+            border-radius: 10px;
+          }
+
+          .card-body {
+            padding: 2rem;
+          }
+
+          h2.card-title {
+            margin-bottom: 1.5rem;
+          }
+
+          .btn {
+            border-radius: 5px;
+          }
+
+          .container {
+            padding: 2rem;
+            border-radius: 10px;
+          }
+
+          .shadow-sm {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          }
+
+          .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+          }
+
+          .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+          }
+          .cover {
+            background-color: #000000;
+            color: #ffffff;
+          }
+
+          .cover h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+          }
+
+          .cover p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+          }
+
+          .btn-light {
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #ffffff;
+          }
+
+          .btn-light:hover {
+            background-color: #000000;
+            color: #ffffff;
+          }
+        </style>
+      </head>
+      <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img
+                src="./img/logoAntonio.jpg"
+                alt="Logo Gimnasio Fit"
+                width="80"
+                height="80"
+                class="d-inline-block align-text-top"
+              />
+              Gimnasio Fit
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#services">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--Fin de NavBar-->
+        <!-- Cover -->
+        <div class="container-fluid p-5 bg-primary text-white text-center">
+          <h1>Bienvenido a Gimnasio Fit</h1>
+          <p>Tu viaje hacia un estilo de vida saludable comienza aquí.</p>
+          <button class="btn btn-light mt-3">Únete ahora</button>
+        </div>
+        <!--Fin de Cover-->
+        <!-- Formulario de inicio de sesión y registro -->
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mb-4 shadow-sm pink-card">
+                <div class="card-body">
+                  <h2 class="card-title text-center">Inicia Sesión</h2>
+                  <form>
+                    <div class="mb-3">
+                      <label for="loginEmail" class="form-label"
+                        >Correo Electrónico</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="loginEmail"
+                        placeholder="Ingresa tu email"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="loginPassword" class="form-label"
+                        >Contraseña</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="loginPassword"
+                        placeholder="Ingresa tu contraseña"
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                      Ingresar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-4 shadow-sm pink-card">
+                <div class="card-body">
+                  <h2 class="card-title text-center">Regístrate</h2>
+                  <form>
+                    <div class="mb-3">
+                      <label for="registerEmail" class="form-label"
+                        >Correo Electrónico</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="registerEmail"
+                        placeholder="Ingresa tu email"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerPassword" class="form-label"
+                        >Contraseña</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="registerPassword"
+                        placeholder="Crea una contraseña"
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">
+                      Registrar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin de Formulario de Inicio de Sesion y Registro-->
+        <!-- Álbum de fotos -->
+        <div class="container my-5 album">
+          <h2 class="text-center mb-4">Nuestro Gimnasio</h2>
+          <div class="row">
+            <div class="col-md-4 d-flex align-items-stretch">
+              <div class="card flex-fill">
+                <img
+                  src="./img/instalaciones.jpg"
+                  class="card-img-top"
+                  alt="Instalaciones"
+                />
+                <div class="card-body">
+                  <p class="card-text">Instalaciones modernas y equipadas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-stretch">
+              <div class="card flex-fill">
+                <img src="./img/pesas.jpg" class="card-img-top" alt="Pesas" />
+                <div class="card-body">
+                  <p class="card-text">Salas de pesas y cardio.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-stretch">
+              <div class="card flex-fill">
+                <img
+                  src="./img/entrenadores.jpg"
+                  class="card-img-top"
+                  alt="Entrenadores"
+                />
+                <div class="card-body">
+                  <p class="card-text">Entrenadores profesionales.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin de Álbum de Fotos -->
+
+        <!-- Footer -->
+        <footer class="container-fluid bg-dark text-white py-4">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <h5>Síguenos</h5>
+              <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="mx-2">
+                  <img
+                    src="./img/facebook.jpg"
+                    alt="Facebook"
+                    width="60"
+                    height="60"
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  class="mx-2"
+                >
+                  <img
+                    src="./img/instagram.jpg"
+                    alt="Instagram"
+                    width="60"
+                    height="60"
+                  />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="mx-2">
+                  <img
+                    src="./img/twitter.png"
+                    alt="Twitter"
+                    width="60"
+                    height="60"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <h5>Contáctanos</h5>
+              <p>Email: info@gimnasiofit.com</p>
+              <p>Teléfono: 677 43 56 32</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <h5>Ubicación</h5>
+              <p>Calle Nebrija 14, Rondilla</p>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <p>&copy; 2024 Gimnasio Fit. Todos los derechos reservados.</p>
+          </div>
+        </footer>
+        <!--Fin de Footer-->
+        <script src="./js/bootstrap.js"></script>
+      </body>
+    </html>
+  </body>
+</html>
