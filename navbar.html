@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NavBar</title>
+    <style>
+      /*navbar*/
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+      }
+
+      .nav-links a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #00bfff;
+        transform: scale(1.1);
+      }
+
+      .nav-search input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .nav-search input:hover {
+        border-color: #00bfff;
+        box-shadow: 0 0 5px #00bfff;
+      }
+      /*fin de navbar*/
+
+      /*botones*/
+
+      /*fin de botones*/
+
+      /*alerts*/
+      .btn {
+        border: none;
+        border-color: #333;
+        border-radius: 10px;
+        border
+        color: rgb(0, 0, 0);
+        padding: 10px 22px;
+        cursor: pointer;
+        margin-top: 40px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
+      }
+
+      .success {
+        background-color: #04aa6d;
+      }
+      .success:hover {
+        background-color: #3ba13f;
+      }
+
+      .info {
+        background-color: #2196f3;
+      }
+      .info:hover {
+        background: #0671c9;
+      }
+
+      .warning {
+        background-color: #ff9800;
+      }
+      .warning:hover {
+        background: #c57906;
+      }
+
+      .danger {
+        background-color: #f44336;
+      }
+      .danger:hover {
+        background: #bd180c;
+      }
+
+      .default {
+        background-color: #e7e7e7;
+        color: black;
+      }
+      .default:hover {
+        background: #c0baba;
+      }
+      /*fin de alerts*/
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#sitio">Sitio</a>
+      </div>
+      <div class="nav-search">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </nav>
+    <div>
+      <button class="btn success">Esto es un success</button>
+      <button class="btn info">Esto es información</button>
+      <button class="btn warning">Esto es un Warning</button>
+      <button class="btn danger">Esto es una alerta</button>
+      <button class="btn default">Esto es por Default</button>
+    </div>
+  </body>
+</html>

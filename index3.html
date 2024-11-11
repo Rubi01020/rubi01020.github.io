@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout with Buttons</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #333;
+        --secondary-color: #00bfff;
+        --bg-color: #333;
+        --text-color: #333;
+        --navbar-bg: #333;
+        --navbar-text: #f2f2f2;
+        --footer-bg: #ddd;
+        --body-bg: #39b6b6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 10px;
+        background: var(--bg-color);
+        background-color: var(--body-bg);
+      }
+
+      .header {
+        padding: 30px;
+        text-align: center;
+        background: white;
+      }
+
+      .header h1 {
+        font-size: 50px;
+        margin: 0;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: var(--navbar-bg);
+        color: var(--navbar-text);
+      }
+
+      .nav-links a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: var(--navbar-text);
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--secondary-color);
+        transform: scale(1.1);
+      }
+
+      .nav-search input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .nav-search input:hover {
+        border-color: var(--secondary-color);
+        box-shadow: 0 0 5px var(--secondary-color);
+      }
+
+      .row {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .main {
+        width: 75%;
+      }
+
+      .aside {
+        width: 25%;
+        height: 630px;
+        background-color: var(--bg-color);
+        padding-left: 20px;
+      }
+
+      .card {
+        background-color: rgb(253, 255, 144);
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 100px;
+      }
+
+      footer .social-links {
+        margin: 10px 0;
+      }
+
+      footer .social-links a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      footer .social-links a:hover {
+        color: #00bfff;
+      }
+
+      footer .contact-info {
+        margin: 10px 0;
+      }
+
+      footer .contact-info p {
+        margin: 5px 0;
+      }
+
+      footer .copyright {
+        margin-top: 15px;
+        font-size: 12px;
+      }
+
+      @media (max-width: 800px) {
+        footer {
+          font-size: 12px;
+        }
+
+        footer .social-links {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        }
+      }
+
+      .btn {
+        border: none;
+        border-radius: 4px;
+        padding: 10px 22px;
+        cursor: pointer;
+        margin: 10px;
+        color: white;
+        text-align: center;
+      }
+
+      .success {
+        background-color: #04aa6d;
+      }
+      .success:hover {
+        background-color: #3ba13f;
+      }
+
+      .info {
+        background-color: #2196f3;
+      }
+      .info:hover {
+        background-color: #0671c9;
+      }
+
+      .warning {
+        background-color: #ff9800;
+      }
+      .warning:hover {
+        background-color: #c57906;
+      }
+
+      .danger {
+        background-color: #f44336;
+      }
+      .danger:hover {
+        background-color: #bd180c;
+      }
+
+      .default {
+        background-color: #e7e7e7;
+        color: black;
+      }
+      .default:hover {
+        background-color: #c0baba;
+      }
+
+      .primary {
+        background-color: #007bff;
+      }
+      .primary:hover {
+        background-color: #0056b3;
+      }
+
+      .secondary {
+        background-color: #6c757d;
+      }
+      .secondary:hover {
+        background-color: #545b62;
+      }
+
+      .outline {
+        background-color: transparent;
+        border: 2px solid #333;
+        color: #333;
+      }
+      .outline:hover {
+        background-color: #333;
+        color: white;
+      }
+
+      @media (max-width: 800px) {
+        .row {
+          flex-direction: column;
+        }
+        .main,
+        .aside {
+          width: 100%;
+        }
+        body {
+          background-color: rgb(47, 54, 54);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <h1>Web de Mario</h1>
+      <p>
+        <strong
+          >Está es mi web responsive con botones, alertas y un navbar.</strong
+        >
+      </p>
+    </div>
+    <!--fin de header-->
+    <!--Navbar-->
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">Sobre Mi</a>
+        <a href="#sitio">Sitio</a>
+      </div>
+      <div class="nav-search">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </nav>
+    <!--fin de NavBar-->
+    <!--Main-->
+    <div class="row">
+      <div class="main">
+        <div class="card">
+          <h2>Alertas</h2>
+          <h5>Descripcion, 6 de Noviembre, 2024</h5>
+          <div>
+            <button class="btn success">Esto es un success</button>
+            <button class="btn info">Esto es información</button>
+            <button class="btn warning">Esto es un Warning</button>
+            <button class="btn danger">Esto es una alerta</button>
+            <button class="btn default">Esto es por Default</button>
+          </div>
+        </div>
+        <!--fin de Main-->
+        <!--Botones-->
+        <div class="card">
+          <h2>Botones</h2>
+          <h5>Descripcion, 6 de Noviembre, 2024</h5>
+          <div style="text-align: center; margin-top: 20px">
+            <button class="btn primary">Boton Primario</button>
+            <button class="btn secondary">Boton secundario</button>
+            <button class="btn outline">Boton terciario</button>
+          </div>
+        </div>
+      </div>
+      <!--fin de Botones-->
+      <!--Barra lateral-->
+      <div class="aside">
+        <div class="card">
+          <h2>Vinicius</h2>
+          <div class="fakeimg" style="height: 100px">
+            <img
+              src="vini.jpg"
+              alt="Vini"
+              style="width: 90%; height: 110%; object-fit: cover"
+            />
+          </div>
+        </div>
+        <div class="card">
+          <h2>Mbappe</h2>
+          <div class="fakeimg" style="height: 100px">
+            <img
+              src="mbappe.jpg"
+              alt="Mbappe"
+              style="width: 90%; height: 110%; object-fit: cover"
+            />
+          </div>
+        </div>
+        <div class="card">
+          <h3>Sigueme</h3>
+          <p>redes...</p>
+        </div>
+      </div>
+    </div>
+    <!--fin de barra lateral-->
+    <!-- Footer -->
+    <footer>
+      <div class="social-links">
+        <a href="#" target="_blank" class="fab fa-facebook-f"></a>
+        <a href="#" target="_blank" class="fab fa-twitter"></a>
+        <a href="#" target="_blank" class="fab fa-instagram"></a>
+        <a href="#" target="_blank" class="fab fa-linkedin-in"></a>
+      </div>
+
+      <div class="contact-info">
+        <p>Email: info@webmario.com</p>
+        <p>Teléfono: +647 89 76 54</p>
+        <p>Dirección: Calle Soto 37, Ciudad, España</p>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2024 Web Mario. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <!--fin de footer-->
+  </body>
+</html>
