@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primer Ejercicio</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .navbar {
+        display: flex;
+        height: 10vh;
+        margin: 0 auto;
+        background-color: #222;
+        border-radius: 8px;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        width: 80%;
+      }
+
+      .navbar div {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .logo {
+        background-color: #ff6347;
+      }
+
+      .titulo {
+        background-color: #4682b4;
+      }
+
+      .buscador {
+        background-color: #32cd32;
+      }
+
+      .buscador input {
+        padding: 5px;
+        width: 80%;
+      }
+
+      main {
+        width: 80%;
+        height: 80vh;
+        background-color: #791d1d;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        overflow: auto;
+        padding: 20px;
+        margin: 0 auto;
+      }
+
+      .contenido-principal {
+        margin-bottom: 20px;
+        background-color: #e0f7fa;
+        padding: 20px;
+        border-radius: 8px;
+        width: 100%;
+      }
+
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+      }
+
+      .card {
+        width: 30%;
+        max-width: 300px;
+        background-color: aliceblue;
+        box-shadow: 5px 5px rgb(160, 138, 31);
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .card-body {
+        padding-left: 10px;
+      }
+
+      .card-action {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+      }
+
+      .btn {
+        background-color: grey;
+        border-radius: 5px;
+        color: aliceblue;
+      }
+
+      .btn:hover {
+        color: black;
+        box-shadow: 5px 2px rgb(100, 98, 98);
+      }
+
+      footer {
+        height: 10vh;
+        background-color: #444;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        color: #fff;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .footer-column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+      }
+
+      .footer-column h4 {
+        margin-bottom: 5px;
+      }
+
+      @media all and (max-width: 600px) {
+        .card {
+          width: 90%;
+        }
+      }
+
+      @media all and (max-width: 400px) {
+        footer {
+          flex-direction: column;
+          height: max-content;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Logo</h1>
+      </div>
+      <div class="titulo">
+        <h2>Título</h2>
+      </div>
+      <div class="buscador">
+        <input type="text" placeholder="Buscar..." />
+      </div>
+    </nav>
+
+    <main>
+      <section>
+        <div class="card">
+          <img src="bellingham.jpg" alt="" />
+          <div class="card-body">
+            <h5>Title card</h5>
+            <p>
+              lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua
+            </p>
+          </div>
+          <div class="card-action">
+            <button class="btn">action 1</button>
+            <button class="btn">action 2</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="mbappe.jpg" alt="" />
+          <div class="card-body">
+            <h5>Title card</h5>
+            <p>
+              lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua
+            </p>
+          </div>
+          <div class="card-action">
+            <button class="btn">action 1</button>
+            <button class="btn">action 2</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="vini.jpg" alt="" />
+          <div class="card-body">
+            <h5>Title card</h5>
+            <p>
+              lorem ipsu lore ipsu lorem ipsu lorea ipsu lorem ipsu lorem ipsua
+            </p>
+          </div>
+          <div class="card-action">
+            <button class="btn">action 1</button>
+            <button class="btn">action 2</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-column">
+        <h4>Columna 1</h4>
+      </div>
+      <div class="footer-column">
+        <h4>Dónde estamos</h4>
+        <p>Dirección: Calle Ejemplo 123, Ciudad</p>
+      </div>
+      <div class="footer-column">
+        <h4>Redes Sociales</h4>
+        <p>Facebook | Twitter | Instagram</p>
+      </div>
+    </footer>
+  </body>
+</html>
