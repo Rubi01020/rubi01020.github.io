@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Cards de Videos</title>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card">
+        <video height="600" class="w-100" autoplay preload="auto" controls>
+          <source src="Paisajes Hermosos - Primavera.mp4" type="video/mp4" />
+          <!-- Subtítulos en diferentes idiomas -->
+          <track
+            src="videos/primavera.vtt"
+            kind="subtitles"
+            srclang="es"
+            label="Español"
+            default
+          />
+          <track
+            src="videos/ingles.vtt"
+            kind="subtitles"
+            srclang="en"
+            label="English"
+          />
+          <track
+            src="videos/frances.vtt"
+            kind="subtitles"
+            srclang="fr"
+            label="Français"
+          />
+        </video>
+        <h3>Video 1: Paisajes Hermosos - Primavera</h3>
+        <p>Disfruta de la belleza de la primavera a través de este video.</p>
+      </div>
+      <div class="card">
+        <video controls>
+          <source src="Paisajes Hermosos - Primavera.webm" type="video/webm" />
+          <!-- Subtítulos en diferentes idiomas -->
+          <track
+            src="videos/primavera.vtt"
+            kind="subtitles"
+            srclang="es"
+            label="Español"
+            default
+          />
+          <track
+            src="videos/ingles.vtt"
+            kind="subtitles"
+            srclang="en"
+            label="English"
+          />
+          <track
+            src="videos/frances.vtt"
+            kind="subtitles"
+            srclang="fr"
+            label="Français"
+          />
+          Tu navegador no soporta el formato de video WebM.
+        </video>
+        <h3>Video 2: Paisajes Hermosos - Primavera</h3>
+        <p>Explora los paisajes primaverales en este video.</p>
+      </div>
+    </div>
+  </body>
+</html>
